@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Cookbookery recipe search</h1>
 
     <form method="post" action="index.php">
-        <label for="search_term">Name of recipe:</label>
+        <label for="search_term">Name of recipes:</label>
 
         <input
             type="text"
