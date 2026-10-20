@@ -30,4 +30,4 @@ Cookbookery is a PHP and MySQL cookbook application that displays recipes stored
 
 ## AI Use
 
-AI assistance was used to help understand PHP and mysqli, troubleshoot database connection and table-name issues
+AI assistance(CHATGPT) was used to help understand PHP and mysqli, troubleshoot database connection and table-name issues only
