@@ -48,7 +48,7 @@ $result = mysqli_query($mysqli, $sql);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cookbookery Recipe Search</title>
+  <title>Cookbook Recipe Search</title>
 </head>
 <body>
   <h1>Cookbookery</h1>
