@@ -1,6 +1,6 @@
 # uxid241-io67
 
-# Cookbookery
+# Cookbook
 
 ## Project Description
 
