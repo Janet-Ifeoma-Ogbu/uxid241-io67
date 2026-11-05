@@ -58,3 +58,37 @@ tests/answer_key
 z-archive
 /.env
 config.php
+
+
+
+# Private configuration
+.env
+.env.*
+!.env.example
+config.local.php
+
+# Temporary account scripts
+create_user.php
+reset_password.php
+
+# Database backups and exports
+*.sql
+*.sql.gz
+database-backup/
+backups/
+
+# Logs
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+
+# Dependencies (if installed later)
+/vendor/
+!schema.sql

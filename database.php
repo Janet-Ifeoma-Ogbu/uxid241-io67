@@ -1,19 +1,18 @@
 <?php
 declare(strict_types=1);
 
-mysqli_report(
-    MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT
+$config = require __DIR__ . '/config.local.php';
+
+$mysqli = mysqli_connect(
+    $config['host'],
+    $config['username'],
+    $config['password'],
+    $config['database']
 );
 
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'idm232';
-$mysqli = new mysqli(
-    $host,
-    $username,
-    $password,
-    $database
-);
+if (!$mysqli) {
+    error_log('Database connection failed: ' . mysqli_connect_error());
+    exit('Unable to connect to the database. Please try again later.');
+}
 
-$mysqli->set_charset('utf8mb4');
+mysqli_set_charset($mysqli, 'utf8mb4');

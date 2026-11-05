@@ -67,8 +67,7 @@ mysqli_free_result($result);
                 <span class="brand-mark" aria-hidden="true">c</span>
                 <span>cookbookery</span>
             </a>
-            <span class="header-note">Good food starts here</span>
-        </div>
+            <a class="header-note" href="login.php">Admin Login</a>
     </header>
 
     <main>
@@ -94,7 +93,7 @@ mysqli_free_result($result);
                     <p class="form-message" role="alert"><?= e($error_message) ?></p>
                 <?php endif; ?>
             </div>
-            <div class="hero-art" aria-hidden="true">
+            <!-- <div class="hero-art" aria-hidden="true">
                 <div class="art-circle circle-one"></div>
                 <div class="art-circle circle-two"></div>
                 <div class="art-card">
@@ -103,7 +102,7 @@ mysqli_free_result($result);
                     <span class="art-plate">◉</span>
                     <span class="art-card-footer">Simple ideas. Delicious meals.</span>
                 </div>
-            </div>
+            </div> -->
         </section>
 
         <section class="recipe-section" id="recipes">
@@ -156,32 +155,8 @@ mysqli_free_result($result);
                                 <h3><?= e((string) $recipe['title']) ?></h3>
                                 <p class="recipe-description"><?= e((string) $recipe['description']) ?></p>
 
-                                <details class="recipe-details">
-                                    <summary>View recipe <span class="summary-plus" aria-hidden="true">+</span></summary>
-                                    <div class="details-content">
-                                        <h4>Ingredients</h4>
-                                        <?php if (count($ingredient_lines) > 0): ?>
-                                            <ul class="ingredient-list">
-                                                <?php foreach ($ingredient_lines as $ingredient): ?>
-                                                    <li><?= e($ingredient) ?></li>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                        <?php else: ?>
-                                            <p>Ingredient information is not available.</p>
-                                        <?php endif; ?>
+                                <a class="view-recipe-btn" href="recipe.php?id=<?= (int) $recipe['id'] ?>">View Recipe</a>
 
-                                        <h4>Instructions</h4>
-                                        <?php if (count($instruction_lines) > 0): ?>
-                                            <ol class="instruction-list">
-                                                <?php foreach ($instruction_lines as $instruction): ?>
-                                                    <li><?= e(preg_replace('/^\d+\.\s*/', '', $instruction) ?? $instruction) ?></li>
-                                                <?php endforeach; ?>
-                                            </ol>
-                                        <?php else: ?>
-                                            <p>Instruction information is not available.</p>
-                                        <?php endif; ?>
-                                    </div>
-                                </details>
                             </div>
                         </article>
                     <?php endforeach; ?>
