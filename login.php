@@ -157,6 +157,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 .login-card h1 {
     color: #263b2b;
+    font-size:50px;
 }
 
 .login-card button {
